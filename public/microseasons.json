@@ -1,0 +1,171 @@
+[
+    {
+      "name": "Risshun",
+      "start": "2024-02-04",
+      "end": "2024-02-18",
+      "description": "Beginning of spring",
+      "nameJapanese": "立春"
+    },
+    {
+      "name": "Usui",
+      "start": "2024-02-19",
+      "end": "2024-03-05",
+      "description": "Rain water",
+      "nameJapanese": "雨水"
+    },
+    {
+      "name": "Keichitsu",
+      "start": "2024-03-06",
+      "end": "2024-03-20",
+      "description": "Awakening of insects",
+      "nameJapanese": "啓蟄"
+    },
+    {
+      "name": "Shunbun",
+      "start": "2024-03-21",
+      "end": "2024-04-04",
+      "description": "Vernal equinox",
+      "nameJapanese": "春分"
+    },
+    {
+      "name": "Seimei",
+      "start": "2024-04-05",
+      "end": "2024-04-19",
+      "description": "Clear and bright",
+      "nameJapanese": "清明"
+    },
+    {
+      "name": "Kokuu",
+      "start": "2024-04-20",
+      "end": "2024-05-04",
+      "description": "Grain rain",
+      "nameJapanese": "穀雨"
+    },
+    {
+      "name": "Rikka",
+      "start": "2024-05-05",
+      "end": "2024-05-20",
+      "description": "Beginning of summer",
+      "nameJapanese": "立夏"
+    },
+    {
+      "name": "Shōman",
+      "start": "2024-05-21",
+      "end": "2024-06-05",
+      "description": "Grain full",
+      "nameJapanese": "小満"
+    },
+    {
+      "name": "Bōshu",
+      "start": "2024-06-06",
+      "end": "2024-06-20",
+      "description": "Grain in ear",
+      "nameJapanese": "芒種"
+    },
+    {
+      "name": "Geshi",
+      "start": "2024-06-21",
+      "end": "2024-07-06",
+      "description": "Summer solstice",
+      "nameJapanese": "夏至"
+    },
+    {
+      "name": "Shōsho",
+      "start": "2024-07-07",
+      "end": "2024-07-22",
+      "description": "Minor heat",
+      "nameJapanese": "小暑"
+    },
+    {
+      "name": "Taisho",
+      "start": "2024-07-23",
+      "end": "2024-08-07",
+      "description": "Major heat",
+      "nameJapanese": "大暑"
+    },
+    {
+      "name": "Risshū",
+      "start": "2024-08-08",
+      "end": "2024-08-22",
+      "description": "Beginning of autumn",
+      "nameJapanese": "立秋"
+    },
+    {
+      "name": "Shosho",
+      "start": "2024-08-23",
+      "end": "2024-09-07",
+      "description": "Limit of heat",
+      "nameJapanese": "処暑"
+    },
+    {
+      "name": "Hakuro",
+      "start": "2024-09-08",
+      "end": "2024-09-22",
+      "description": "White dew",
+      "nameJapanese": "白露"
+    },
+    {
+      "name": "Shūbun",
+      "start": "2024-09-23",
+      "end": "2024-10-07",
+      "description": "Autumnal equinox",
+      "nameJapanese": "秋分"
+    },
+    {
+      "name": "Kanro",
+      "start": "2024-10-08",
+      "end": "2024-10-22",
+      "description": "Cold dew",
+      "nameJapanese": "寒露"
+    },
+    {
+      "name": "Sōkō",
+      "start": "2024-10-23",
+      "end": "2024-11-06",
+      "description": "Descent of frost",
+      "nameJapanese": "霜降"
+    },
+    {
+      "name": "Rittō",
+      "start": "2024-11-07",
+      "end": "2024-11-21",
+      "description": "Beginning of winter",
+      "nameJapanese": "立冬"
+    },
+    {
+      "name": "Shōsetsu",
+      "start": "2024-11-22",
+      "end": "2024-12-06",
+      "description": "Minor snow",
+      "nameJapanese": "小雪"
+    },
+    {
+      "name": "Taisetsu",
+      "start": "2024-12-07",
+      "end": "2024-12-21",
+      "description": "Major snow",
+      "nameJapanese": "大雪"
+    },
+    {
+      "name": "Tōji",
+      "start": "2024-12-22",
+      "end": "2025-01-04",
+      "description": "Winter solstice",
+      "nameJapanese": "冬至"
+    },
+    {
+      "name": "Shōkan",
+      "start": "2025-01-05",
+      "end": "2025-01-19",
+      "description": "Minor cold",
+      "nameJapanese": "小寒"
+    },
+    {
+      "name": "Daikan",
+      "start": "2025-01-20",
+      "end": "2025-02-03",
+      "description": "Major cold",
+      "nameJapanese": "大寒"
+    }
+  ]
+  
