@@ -2,8 +2,16 @@
 import { useState, useEffect } from "react";
 import data from "../../public/microseasons.json";
 
+interface Microseason {
+  name: string;
+  start: string;
+  end: string;
+  description: string;
+  nameJapanese: string;
+}
+
 export default function Home() {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState<Microseason[]>([]);
 
   useEffect(() => {
     setItems(data);
