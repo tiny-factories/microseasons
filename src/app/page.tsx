@@ -11,35 +11,34 @@ interface Microseason {
 }
 
 export default function Home() {
-  const [items, setItems] = useState<Microseason[]>([]);
+  const [currentSeason, setCurrentSeason] = useState<Microseason | null>(null);
 
   useEffect(() => {
-    setItems(data);
+    const today = new Date();
+    const currentSeason = data.find((season) => {
+      const startDate = new Date(season.start);
+      const endDate = new Date(season.end);
+      return startDate <= today && endDate >= today;
+    });
+    setCurrentSeason(currentSeason || null);
   }, []);
+
   return (
     <div className="p-4">
-      <h1 className="text-3xl font-bold mb-2">Japan Microseasons API</h1>
-      <p className="mb-4">
-        This API provides information about the microseasons of Japan.
-      </p>
-      <p className="mb-4">
-        To use the API, make a GET request to{" "}
-        <code className="bg-gray-100 p-1 rounded">/api/microseasons</code>.
-      </p>
-      <div className="space-y-4">
-        {items.map((item) => (
-          <div key={item.name} className="border p-4 rounded shadow">
-            <h2 className="text-2xl font-semibold">
-              {item.name} ({item.nameJapanese})
-            </h2>
-            <p className="my-2">{item.description}</p>
-            <p>
-              <span className="font-medium">Start:</span> {item.start} -{" "}
-              <span className="font-medium">End:</span> {item.end}
-            </p>
-          </div>
-        ))}
-      </div>
+      {currentSeason ? (
+        <div className="border p-4 rounded shadow">
+          <h2 className="text-2xl font-semibold">
+            {currentSeason.name} ({currentSeason.nameJapanese})
+          </h2>
+          <p className="my-2">{currentSeason.description}</p>
+          <p>
+            <span className="font-medium">Start:</span> {currentSeason.start} -{" "}
+            <span className="font-medium">End:</span> {currentSeason.end}
+          </p>
+        </div>
+      ) : (
+        <p>Currently, there is no season data available.</p>
+      )}
     </div>
   );
 }
