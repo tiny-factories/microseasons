@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import data from "../../public/microseasons.json";
+import data from "../../../public/microseasons.json";
 
 interface Microseason {
   name: string;
