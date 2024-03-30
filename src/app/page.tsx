@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <div className="p-4 flex flex-col justify-between h-screen">
       {currentSeason ? (
-        <div className="border p-4 rounded shadow flex-1 flex flex-col justify-between">
+        <div className="border m-24 p-24 rounded-lg shadow flex-1 flex flex-col justify-between">
           <div className="text-center">
             <h2 className="text-4xl font-semibold my-4 mx-auto self-center">
               {currentSeason.name} ({currentSeason.nameJapanese})
@@ -35,8 +35,8 @@ export default function Home() {
           </div>
           <footer className="text-center p-4">
             <p>
-              <span className="font-medium">Start:</span> {currentSeason.start}{" "}
-              - <span className="font-medium">End:</span> {currentSeason.end}
+              <span className="font-medium"></span> {currentSeason.start} to{" "}
+              <span className="font-medium"></span> {currentSeason.end}
             </p>
           </footer>
         </div>
