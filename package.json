@@ -4,9 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export && npm run generate-rss && generate-sitemap"
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate-sitemap": "node scripts/generate-sitemap.js",
+    "generate-rss": "node scripts/generate-rss.js"
+
   },
   "dependencies": {
     "react": "^18",
