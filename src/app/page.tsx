@@ -24,17 +24,21 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="p-4">
+    <div className="p-4 flex flex-col justify-between h-screen">
       {currentSeason ? (
-        <div className="border p-4 rounded shadow">
-          <h2 className="text-2xl font-semibold">
-            {currentSeason.name} ({currentSeason.nameJapanese})
-          </h2>
-          <p className="my-2">{currentSeason.description}</p>
-          <p>
-            <span className="font-medium">Start:</span> {currentSeason.start} -{" "}
-            <span className="font-medium">End:</span> {currentSeason.end}
-          </p>
+        <div className="border p-4 rounded shadow flex-1 flex flex-col justify-between">
+          <div className="text-center">
+            <h2 className="text-4xl font-semibold my-4 mx-auto self-center">
+              {currentSeason.name} ({currentSeason.nameJapanese})
+            </h2>
+            <p className="my-2">{currentSeason.description}</p>
+          </div>
+          <footer className="text-center p-4">
+            <p>
+              <span className="font-medium">Start:</span> {currentSeason.start}{" "}
+              - <span className="font-medium">End:</span> {currentSeason.end}
+            </p>
+          </footer>
         </div>
       ) : (
         <p>Currently, there is no season data available.</p>
