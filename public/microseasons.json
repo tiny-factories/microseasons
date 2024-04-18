@@ -1,171 +1,374 @@
 [
-    {
-      "name": "Risshun",
-      "start": "2024-02-04",
-      "end": "2024-02-18",
-      "description": "Beginning of spring",
-      "nameJapanese": "立春"
+  {
+    "name": "Risshun",
+    "start": "2024-02-04",
+    "end": "2024-02-18",
+    "description": "Beginning of spring",
+    "nameJapanese": "立春",
+    "imageUrl": "/images/2024-02-04-risshun.png",
+    "colorMatrix": ["#000000", "#FFFFFF"],
+    "soundUrl": "/sounds/2024-02-04-risshun.mp3",
+    "quote": {
+      "text": "Example quote",
+      "author": "Author Name"
     },
-    {
-      "name": "Usui",
-      "start": "2024-02-19",
-      "end": "2024-03-05",
-      "description": "Rain water",
-      "nameJapanese": "雨水"
+    "slug": "risshun",
+    "subDivisions": [
+      {
+        "name": "Harukaze kōri o toku",
+        "start": "2024-02-04",
+        "end": "2024-02-08",
+        "description": "East wind melts the ice",
+        "nameJapanese": "東風解凍",
+        "imageUrl": "/images/2024-02-04-harukaze-kori-o-toku.png",
+        "colorMatrix": ["#000000", "#FFFFFF"],
+        "soundUrl": "/sounds/2024-02-04-harukaze-kori-o-toku.mp3",
+        "quote": {
+          "text": "Example quote",
+          "author": "Author Name"
+        },
+        "slug": "harukaze-kori-o-toku"
+      },
+      {
+        "name": "Kōō kenkan su",
+        "start": "2024-02-09",
+        "end": "2024-02-13",
+        "description": "Bush warblers start singing in the mountains",
+        "nameJapanese": "黄鶯睍睆",
+        "imageUrl": "/images/2024-02-09-koo-kenkan-su.png",
+        "colorMatrix": ["#000000", "#FFFFFF"],
+        "soundUrl": "/sounds/2024-02-09-koo-kenkan-su.mp3",
+        "quote": {
+          "text": "Example quote",
+          "author": "Author Name"
+        },
+        "slug": "koo-kenkan-su"
+      },
+      {
+        "name": "Uo kōri o izuru",
+        "start": "2024-02-14",
+        "end": "2024-02-18",
+        "description": "Fish emerge from the ice",
+        "nameJapanese": "魚上氷",
+        "imageUrl": "/images/2024-02-09-uo-kori-o-izuru.png",
+        "colorMatrix": ["#000000", "#FFFFFF"],
+        "soundUrl": "/sounds/2024-02-09-uo-kori-o-izuru.mp3",
+        "quote": {
+          "text": "Example quote",
+          "author": "Author Name"
+        },
+        "slug": "uo-kori-o-izuru"
+      }
+    ]
+  },
+  {
+    "name": "Usui",
+    "start": "2024-02-19",
+    "end": "2024-03-01",
+    "description": "Rainwater",
+    "nameJapanese": "雨水",
+    "imageUrl": "/images/2024-02-19-usui.png",
+    "colorMatrix": ["#000000", "#FFFFFF"],
+    "soundUrl": "/sounds/2024-02-19-usui.mp3",
+    "quote": {
+      "text": "Example quote",
+      "author": "Author Name"
     },
-    {
-      "name": "Keichitsu",
-      "start": "2024-03-06",
-      "end": "2024-03-20",
-      "description": "Awakening of insects",
-      "nameJapanese": "啓蟄"
+    "slug": "usui",
+    "subDivisions": [
+      {
+        "name": "Tsuchi no shō uruoi okoru",
+        "start": "2024-02-19",
+        "end": "2024-02-23",
+        "description": "Rain moistens the soil",
+        "nameJapanese": "土脉潤起",
+        "imageUrl": "/images/2024-02-19-tsuchi-no-sho-uruoi-okoru.png",
+        "colorMatrix": ["#000000", "#FFFFFF"],
+        "soundUrl": "/sounds/2024-02-19-tsuchi-no-sho-uruoi-okoru.mp3",
+        "quote": {
+          "text": "Example quote",
+          "author": "Author Name"
+        },
+        "slug": "tsuchi-no-sho-uruoi-okoru"
+      },
+      {
+        "name": "Kasumi hajimete tanabiku",
+        "start": "2024-02-24",
+        "end": "2024-02-28",
+        "description": "Mist starts to linger",
+        "nameJapanese": "霞始靆",
+        "imageUrl": "/images/2024-02-24-kasumi-hajimete-tanabiku.png",
+        "colorMatrix": ["#000000", "#FFFFFF"],
+        "soundUrl": "/sounds/2024-02-24-kasumi-hajimete-tanabiku.mp3",
+        "quote": {
+          "text": "Example quote",
+          "author": "Author Name"
+        },
+        "slug": "kasumi-hajimete-tanabiku"
+      },
+      {
+        "name": "Sōmoku mebae izuru",
+        "start": "2024-03-01",
+        "end": "2024-03-05",
+        "description": "Grass sprouts, trees bud",
+        "nameJapanese": "草木萌動",
+        "imageUrl": "/images/2024-03-01-somoku-mebae-izuru.png",
+        "colorMatrix": ["#000000", "#FFFFFF"],
+        "soundUrl": "/sounds/2024-03-01-somoku-mebae-izuru.mp3",
+        "quote": {
+          "text": "Example quote",
+          "author": "Author Name"
+        },
+        "slug": "somoku-mebae-izuru"
+      }
+    ]
+  },
+  {
+    "name": "Keichitsu",
+    "start": "2024-03-06",
+    "end": "2024-03-20",
+    "description": "Insects awaken",
+    "nameJapanese": "啓蟄",
+    "imageUrl": "/images/2024-03-06-keichitsu.png",
+    "colorMatrix": ["#000000", "#FFFFFF"],
+    "soundUrl": "/sounds/2024-03-06-keichitsu.mp3",
+    "quote": {
+      "text": "Example quote",
+      "author": "Author Name"
     },
-    {
-      "name": "Shunbun",
-      "start": "2024-03-21",
-      "end": "2024-04-04",
-      "description": "Vernal equinox",
-      "nameJapanese": "春分"
+    "slug": "keichitsu",
+    "subDivisions": [
+      {
+        "name": "Sugomori mushito o hiraku",
+        "start": "2024-03-06",
+        "end": "2024-03-10",
+        "description": "Hibernating insects surface",
+        "nameJapanese": "蟄虫啓戸",
+        "imageUrl": "/images/2024-03-06-sugomori-mushito-o-hiraku.png",
+        "colorMatrix": ["#000000", "#FFFFFF"],
+        "soundUrl": "/sounds/2024-03-06-sugomori-mushito-o-hiraku.mp3",
+        "quote": {
+          "text": "Example quote",
+          "author": "Author Name"
+        },
+        "slug": "sugomori-mushito-o-hiraku"
+      },
+      {
+        "name": "Momo hajimete saku",
+        "start": "2024-03-11",
+        "end": "2024-03-15",
+        "description": "First peach blossoms",
+        "nameJapanese": "桃始笑",
+        "imageUrl": "/images/2024-03-11-momo-hajimete-saku.png",
+        "colorMatrix": ["#000000", "#FFFFFF"],
+        "soundUrl": "/sounds/2024-03-11-momo-hajimete-saku.mp3",
+        "quote": {
+          "text": "Example quote",
+          "author": "Author Name"
+        },
+        "slug": "momo-hajimete-saku"
+      },
+      {
+        "name": "Namushi chō to naru",
+        "start": "2024-03-16",
+        "end": "2024-03-20",
+        "description": "Caterpillars become butterflies",
+        "nameJapanese": "菜虫化蝶",
+        "imageUrl": "/images/2024-03-16-namushi-cho-to-naru.png",
+        "colorMatrix": ["#000000", "#FFFFFF"],
+        "soundUrl": "/sounds/2024-03-16-namushi-cho-to-naru.mp3",
+        "quote": {
+          "text": "Example quote",
+          "author": "Author Name"
+        },
+        "slug": "namushi-cho-to-naru"
+      }
+    ]
+  },
+  {
+    "name": "Shunbun",
+    "start": "2024-03-21",
+    "end": "2024-03-25",
+    "description": "Spring equinox",
+    "nameJapanese": "春分",
+    "imageUrl": "/images/2024-03-21-shunbun.png",
+    "colorMatrix": ["#000000", "#FFFFFF"],
+    "soundUrl": "/sounds/2024-03-21-shunbun.mp3",
+    "quote": {
+      "text": "Example quote",
+      "author": "Author Name"
     },
-    {
-      "name": "Seimei",
-      "start": "2024-04-05",
-      "end": "2024-04-19",
-      "description": "Clear and bright",
-      "nameJapanese": "清明"
+    "slug": "shunbun",
+    "subDivisions": [
+      {
+        "name": "Suzume hajimete sukū",
+        "start": "2024-03-21",
+        "end": "2024-03-25",
+        "description": "Sparrows start to nest",
+        "nameJapanese": "雀始巣",
+        "imageUrl": "/images/2024-03-21-suzume-hajimete-suku.png",
+        "colorMatrix": ["#000000", "#FFFFFF"],
+        "soundUrl": "/sounds/2024-03-21-suzume-hajimete-suku.mp3",
+        "quote": {
+          "text": "Example quote",
+          "author": "Author Name"
+        },
+        "slug": "suzume-hajimete-suku"
+      },
+      {
+        "name": "Sakura hajimete saku",
+        "start": "2024-03-26",
+        "end": "2024-03-30",
+        "description": "First cherry blossoms",
+        "nameJapanese": "櫻始開",
+        "imageUrl": "/images/2024-03-26-sakura-hajimete-saku.png",
+        "colorMatrix": ["#000000", "#FFFFFF"],
+        "soundUrl": "/sounds/2024-03-26-sakura-hajimete-saku.mp3",
+        "quote": {
+          "text": "Example quote",
+          "author": "Author Name"
+        },
+        "slug": "sakura-hajimete-saku"
+      },
+      {
+        "name": "Kaminari sunawachi koe o hassu",
+        "start": "2024-03-31",
+        "end": "2024-04-04",
+        "description": "Distant thunder",
+        "nameJapanese": "乃発声",
+        "imageUrl": "/images/2024-03-31-kaminari-sunawachi-koe-o-hassu.png",
+        "colorMatrix": ["#000000", "#FFFFFF"],
+        "soundUrl": "/sounds/2024-03-31-kaminari-sunawachi-koe-o-hassu.mp3",
+        "quote": {
+          "text": "Example quote",
+          "author": "Author Name"
+        },
+        "slug": "kaminari-sunawachi-koe-o-hassu"
+      }
+    ]
+  },
+  {
+    "name": "Seimei",
+    "start": "2024-04-05",
+    "end": "2024-04-19",
+    "description": "Pure and clear",
+    "nameJapanese": "清明",
+    "imageUrl": "/images/2024-04-05-seimei.png",
+    "colorMatrix": ["#000000", "#FFFFFF"],
+    "soundUrl": "/sounds/2024-04-05-seimei.mp3",
+    "quote": {
+      "text": "Example quote",
+      "author": "Author Name"
     },
-    {
-      "name": "Kokuu",
-      "start": "2024-04-20",
-      "end": "2024-05-04",
-      "description": "Grain rain",
-      "nameJapanese": "穀雨"
+    "slug": "seimei",
+    "subDivisions": [
+      {
+        "name": "Tsubame kitaru",
+        "start": "2024-04-05",
+        "end": "2024-04-09",
+        "description": "Swallows return",
+        "nameJapanese": "玄鳥至",
+        "imageUrl": "/images/2024-04-05-tsubame-kitaru.png",
+        "colorMatrix": ["#000000", "#FFFFFF"],
+        "soundUrl": "/sounds/2024-04-05-tsubame-kitaru.mp3",
+        "quote": {
+          "text": "Example quote",
+          "author": "Author Name"
+        },
+        "slug": "tsubame-kitaru"
+      },
+      {
+        "name": "Kōgan kaeru",
+        "start": "2024-04-10",
+        "end": "2024-04-14",
+        "description": "Wild geese fly north",
+        "nameJapanese": "鴻雁北",
+        "imageUrl": "/images/2024-04-10-kogan-kaeru.png",
+        "colorMatrix": ["#000000", "#FFFFFF"],
+        "soundUrl": "/sounds/2024-04-10-kogan-kaeru.mp3",
+        "quote": {
+          "text": "Example quote",
+          "author": "Author Name"
+        },
+        "slug": "kogan-kaeru"
+      },
+      {
+        "name": "Niji hajimete arawaru",
+        "start": "2024-04-15",
+        "end": "2024-04-19",
+        "description": "First rainbows",
+        "nameJapanese": "虹始見",
+        "imageUrl": "/images/2024-04-15-niji-hajimete-arawaru.png",
+        "colorMatrix": ["#000000", "#FFFFFF"],
+        "soundUrl": "/sounds/2024-04-15-niji-hajimete-arawaru.mp3",
+        "quote": {
+          "text": "Example quote",
+          "author": "Author Name"
+        },
+        "slug": "niji-hajimete-arawaru"
+      }
+    ]
+  },
+  {
+    "name": "Kokuu",
+    "start": "2024-04-20",
+    "end": "2024-05-04",
+    "description": "Grain rains",
+    "nameJapanese": "穀雨",
+    "imageUrl": "/images/2024-04-20-kokuu.png",
+    "colorMatrix": ["#000000", "#FFFFFF"],
+    "soundUrl": "/sounds/2024-04-20-kokuu.mp3",
+    "quote": {
+      "text": "Example quote",
+      "author": "Author Name"
     },
-    {
-      "name": "Rikka",
-      "start": "2024-05-05",
-      "end": "2024-05-20",
-      "description": "Beginning of summer",
-      "nameJapanese": "立夏"
-    },
-    {
-      "name": "Shōman",
-      "start": "2024-05-21",
-      "end": "2024-06-05",
-      "description": "Grain full",
-      "nameJapanese": "小満"
-    },
-    {
-      "name": "Bōshu",
-      "start": "2024-06-06",
-      "end": "2024-06-20",
-      "description": "Grain in ear",
-      "nameJapanese": "芒種"
-    },
-    {
-      "name": "Geshi",
-      "start": "2024-06-21",
-      "end": "2024-07-06",
-      "description": "Summer solstice",
-      "nameJapanese": "夏至"
-    },
-    {
-      "name": "Shōsho",
-      "start": "2024-07-07",
-      "end": "2024-07-22",
-      "description": "Minor heat",
-      "nameJapanese": "小暑"
-    },
-    {
-      "name": "Taisho",
-      "start": "2024-07-23",
-      "end": "2024-08-07",
-      "description": "Major heat",
-      "nameJapanese": "大暑"
-    },
-    {
-      "name": "Risshū",
-      "start": "2024-08-08",
-      "end": "2024-08-22",
-      "description": "Beginning of autumn",
-      "nameJapanese": "立秋"
-    },
-    {
-      "name": "Shosho",
-      "start": "2024-08-23",
-      "end": "2024-09-07",
-      "description": "Limit of heat",
-      "nameJapanese": "処暑"
-    },
-    {
-      "name": "Hakuro",
-      "start": "2024-09-08",
-      "end": "2024-09-22",
-      "description": "White dew",
-      "nameJapanese": "白露"
-    },
-    {
-      "name": "Shūbun",
-      "start": "2024-09-23",
-      "end": "2024-10-07",
-      "description": "Autumnal equinox",
-      "nameJapanese": "秋分"
-    },
-    {
-      "name": "Kanro",
-      "start": "2024-10-08",
-      "end": "2024-10-22",
-      "description": "Cold dew",
-      "nameJapanese": "寒露"
-    },
-    {
-      "name": "Sōkō",
-      "start": "2024-10-23",
-      "end": "2024-11-06",
-      "description": "Descent of frost",
-      "nameJapanese": "霜降"
-    },
-    {
-      "name": "Rittō",
-      "start": "2024-11-07",
-      "end": "2024-11-21",
-      "description": "Beginning of winter",
-      "nameJapanese": "立冬"
-    },
-    {
-      "name": "Shōsetsu",
-      "start": "2024-11-22",
-      "end": "2024-12-06",
-      "description": "Minor snow",
-      "nameJapanese": "小雪"
-    },
-    {
-      "name": "Taisetsu",
-      "start": "2024-12-07",
-      "end": "2024-12-21",
-      "description": "Major snow",
-      "nameJapanese": "大雪"
-    },
-    {
-      "name": "Tōji",
-      "start": "2024-12-22",
-      "end": "2025-01-04",
-      "description": "Winter solstice",
-      "nameJapanese": "冬至"
-    },
-    {
-      "name": "Shōkan",
-      "start": "2025-01-05",
-      "end": "2025-01-19",
-      "description": "Minor cold",
-      "nameJapanese": "小寒"
-    },
-    {
-      "name": "Daikan",
-      "start": "2025-01-20",
-      "end": "2025-02-03",
-      "description": "Major cold",
-      "nameJapanese": "大寒"
-    }
-  ]
-  
+    "slug": "kokuu",
+    "subDivisions": [
+      {
+        "name": "Ashi hajimete shōzu",
+        "start": "2024-04-20",
+        "end": "2024-04-24",
+        "description": "First reeds sprout",
+        "nameJapanese": "葭始生",
+        "imageUrl": "/images/2024-04-20-ashi-hajimete-shozu.png",
+        "colorMatrix": ["#000000", "#FFFFFF"],
+        "soundUrl": "/sounds/2024-04-20-ashi-hajimete-shozu.mp3",
+        "quote": {
+          "text": "Example quote",
+          "author": "Author Name"
+        },
+        "slug": "ashi-hajimete-shozu"
+      },
+      {
+        "name": "Shimo yamite nae izuru",
+        "start": "2024-04-25",
+        "end": "2024-04-29",
+        "description": "Last frost, rice seedlings grow",
+        "nameJapanese": "霜止出苗",
+        "imageUrl": "/images/2024-04-25-shimo-yamite-nae-izuru.png",
+        "colorMatrix": ["#000000", "#FFFFFF"],
+        "soundUrl": "/sounds/2024-04-25-shimo-yamite-nae-izuru.mp3",
+        "quote": {
+          "text": "Example quote",
+          "author": "Author Name"
+        },
+        "slug": "shimo-yamite-nae-izuru"
+      },
+      {
+        "name": "Botan hana saku",
+        "start": "2024-04-30",
+        "end": "2024-05-04",
+        "description": "Peonies bloom",
+        "nameJapanese": "牡丹華",
+        "imageUrl": "/images/2024-04-30-botan-hana-saku.png",
+        "colorMatrix": ["#000000", "#FFFFFF"],
+        "soundUrl": "/sounds/2024-04-30-botan-hana-saku.mp3",
+        "quote": {
+          "text": "Example quote",
+          "author": "Author Name"
+        },
+        "slug": "botan-hana-saku"
+      }
+    ]
+  }
+]

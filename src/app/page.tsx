@@ -1,6 +1,8 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import data from "../../public/microseasons.json";
+import { PlayIcon, PauseIcon } from "@radix-ui/react-icons";
+import Image from "next/image";
 
 interface Microseason {
   name: string;
@@ -8,10 +10,29 @@ interface Microseason {
   end: string;
   description: string;
   nameJapanese: string;
+  imageUrl: string;
+  soundUrl: string;
+  colorMatrix: string[];
+  subDivisions?: SubDivision[];
+}
+
+interface SubDivision {
+  name: string;
+  start: string;
+  end: string;
+  description: string;
+  nameJapanese: string;
+  imageUrl: string;
+  colorMatrix: string[];
+  soundUrl: string;
 }
 
 export default function Home() {
   const [currentSeason, setCurrentSeason] = useState<Microseason | null>(null);
+  const [currentSubDivision, setCurrentSubDivision] =
+    useState<SubDivision | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
     const today = new Date();
@@ -20,28 +41,102 @@ export default function Home() {
       const endDate = new Date(season.end);
       return startDate <= today && endDate >= today;
     });
+
+    if (currentSeason && currentSeason.subDivisions) {
+      const currentSubDivision = currentSeason.subDivisions.find(
+        (subDivision) => {
+          const startDate = new Date(subDivision.start);
+          const endDate = new Date(subDivision.end);
+          return startDate <= today && endDate >= today;
+        }
+      );
+      setCurrentSubDivision(currentSubDivision || null);
+    }
+
     setCurrentSeason(currentSeason || null);
   }, []);
 
+  useEffect(() => {
+    if (isPlaying && audioRef.current) {
+      audioRef.current.play();
+    } else if (audioRef.current) {
+      audioRef.current.pause();
+    }
+  }, [isPlaying]);
+
+  const togglePlay = () => {
+    setIsPlaying(!isPlaying);
+  };
+
+  const createGradient = (colors: string[]) =>
+    `linear-gradient(135deg, ${colors.join(", ")})`;
+
   return (
-    <div className="p-4 flex flex-col justify-between h-screen">
-      {currentSeason ? (
-        <div className="border m-24 p-24 rounded-lg shadow flex-1 flex flex-col justify-between">
-          <div className="text-center">
-            <h2 className="text-4xl font-semibold my-4 mx-auto self-center">
-              {currentSeason.name} ({currentSeason.nameJapanese})
-            </h2>
-            <p className="my-2">{currentSeason.description}</p>
+    <div className="flex flex-row justify-between h-screen w-screen">
+      {currentSeason && currentSubDivision ? (
+        <>
+          <div className="flex h-full w-full backdrop-filter backdrop-blur-lg bg-opacity-30 bg-white dark:bg-black dark:bg-opacity-30">
+            <div className="w-1/2 p-8 flex flex-col justify-center">
+              <div>
+                <div className="uppercase text-sm font-semibold">season:</div>
+                <div>{currentSeason.name}</div>
+              </div>
+
+              <h2 className="text-3xl font-semibold mb-4 text-black dark:text-white">
+                <div className="uppercase text-sm font-semibold">kō:</div>
+                {currentSubDivision.name} ({currentSubDivision.nameJapanese}) -{" "}
+              </h2>
+              <p className="mb-6 text-black dark:text-white">
+                {currentSubDivision.description}
+              </p>
+              <p className="text-black dark:text-white">
+                <span className="font-medium">Start:</span>{" "}
+                {currentSubDivision.start} <br />
+                <span className="font-medium">End:</span>{" "}
+                {currentSubDivision.end}
+              </p>
+              <p className="mt-4 uppercase font-semibold text-black dark:text-white">
+                {(() => {
+                  const endDate = new Date(currentSubDivision.end);
+                  const today = new Date();
+                  const remainingDays = Math.ceil(
+                    (endDate.getTime() - today.getTime()) / (1000 * 3600 * 24)
+                  );
+                  return `Days left: ${remainingDays}`;
+                })()}
+              </p>
+            </div>
+            <div className="w-1/2">
+              <Image
+                src={currentSubDivision.imageUrl}
+                alt={currentSubDivision.name}
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
           </div>
-          <footer className="text-center p-4">
-            <p>
-              <span className="font-medium"></span> {currentSeason.start} to{" "}
-              <span className="font-medium"></span> {currentSeason.end}
-            </p>
-          </footer>
-        </div>
+          <audio ref={audioRef} src={currentSubDivision.soundUrl} loop />
+          <button
+            onClick={togglePlay}
+            className="absolute bottom-4 left-4 bg-gray-800 text-white p-2 rounded-full"
+          >
+            {isPlaying ? <PauseIcon /> : <PlayIcon />}
+          </button>
+        </>
       ) : (
-        <p>Currently, there is no season data available.</p>
+        <div className="flex h-full w-full">
+          <div className="w-1/2 p-8 flex flex-col justify-center items-center">
+            <div className="animate-pulse flex flex-col h-full w-full justify-center items-center">
+              <div className="bg-gray-300 h-12 w-3/4 mb-4"></div>
+              <div className="bg-gray-300 h-6 w-5/6 mb-2"></div>
+              <div className="bg-gray-300 h-6 w-5/6 mb-2"></div>
+              <div className="bg-gray-300 h-6 w-5/6"></div>
+            </div>
+          </div>
+          <div className="w-1/2 animate-pulse">
+            <div className="bg-gray-300 h-full w-full"></div>
+          </div>
+        </div>
       )}
     </div>
   );
