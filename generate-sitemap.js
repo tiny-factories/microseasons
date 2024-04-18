@@ -1,16 +1,11 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 // Define your website's base URL
-const BASE_URL = 'https://yourwebsite.com';
+const BASE_URL = "https://tinyseasons.vercel.app";
 
 // List all your routes
-const routes = [
-  '/',
-  '/about',
-  '/contact',
-  // Add other routes here
-];
+const routes = ["/"];
 
 // Generate sitemap.xml content
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -25,10 +20,10 @@ ${routes
     <priority>0.7</priority>
   </url>`
   )
-  .join('')}
+  .join("")}
 </urlset>`;
 
 // Write the sitemap.xml to the public folder
-fs.writeFileSync(path.resolve(__dirname, '../public/sitemap.xml'), sitemap);
+fs.writeFileSync(path.resolve(__dirname, "../public/sitemap.xml"), sitemap);
 
-console.log('Sitemap generated!');
+console.log("🤖: Sitemap generated!");
