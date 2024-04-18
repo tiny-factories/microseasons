@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} dark:bg-[#482231] dark:text-[#C7DEED] bg-[#C7DEED] text-[#482231]`}
+        className={`${inter.className} dark:bg-[#482231] dark:text-[#C7DEED] text-[#482231]`}
       >
         {/* <nav className="flex justify-between items-center p-4">
           <div className="logo">

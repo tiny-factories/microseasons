@@ -79,12 +79,14 @@ export default function Home() {
             <div className="w-1/2 p-8 flex flex-col justify-center">
               <div>
                 <div className="uppercase text-sm font-semibold">season:</div>
-                <div>{currentSeason.name}</div>
+                <h2 className="text-3xl font-semibold mb-4 text-black dark:text-white">
+                  {currentSeason.name}
+                </h2>
               </div>
 
               <h2 className="text-3xl font-semibold mb-4 text-black dark:text-white">
                 <div className="uppercase text-sm font-semibold">kō:</div>
-                {currentSubDivision.name} ({currentSubDivision.nameJapanese}) -{" "}
+                {currentSubDivision.name} / {currentSubDivision.nameJapanese}
               </h2>
               <p className="mb-6 text-black dark:text-white">
                 {currentSubDivision.description}
@@ -106,16 +108,17 @@ export default function Home() {
                 })()}
               </p>
             </div>
-            <div className="w-1/2">
+            <div className="w-1/2 relative">
               <Image
-                src={currentSubDivision.imageUrl}
-                alt={currentSubDivision.name}
+                src={currentSeason.imageUrl}
+                alt={currentSeason.name}
                 layout="fill"
-                objectFit="cover"
+                objectFit="contain"
+                className="border border-black"
               />
             </div>
           </div>
-          <audio ref={audioRef} src={currentSubDivision.soundUrl} loop />
+          <audio ref={audioRef} src={currentSeason.soundUrl} loop />
           <button
             onClick={togglePlay}
             className="absolute bottom-4 left-4 bg-gray-800 text-white p-2 rounded-full"
