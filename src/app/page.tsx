@@ -36,9 +36,17 @@ export default function Home() {
 
   useEffect(() => {
     const today = new Date();
+    today.setHours(0, 0, 0, 0); // Set time to start of the day
+    console.log("Today's date:", today);
+
     const currentSeason = data.find((season) => {
       const startDate = new Date(season.start);
+      startDate.setHours(0, 0, 0, 0); // Set time to start of the day
       const endDate = new Date(season.end);
+      endDate.setHours(23, 59, 59, 999); // Set time to end of the day
+      console.log(
+        `Checking season: ${season.name}, Start: ${startDate}, End: ${endDate}`
+      );
       return startDate <= today && endDate >= today;
     });
 
@@ -46,7 +54,9 @@ export default function Home() {
       const currentSubDivision = currentSeason.subDivisions.find(
         (subDivision) => {
           const startDate = new Date(subDivision.start);
+          startDate.setHours(0, 0, 0, 0); // Adjust for start of the day
           const endDate = new Date(subDivision.end);
+          endDate.setHours(23, 59, 59, 999); // Adjust for end of the day
           return startDate <= today && endDate >= today;
         }
       );
@@ -70,6 +80,11 @@ export default function Home() {
 
   const createGradient = (colors: string[]) =>
     `linear-gradient(135deg, ${colors.join(", ")})`;
+
+  useEffect(() => {
+    console.log("Current Season:", currentSeason);
+    console.log("Current SubDivision:", currentSubDivision);
+  }, [currentSeason, currentSubDivision]);
 
   return (
     <div className="flex flex-row justify-between h-screen w-screen">
@@ -100,7 +115,9 @@ export default function Home() {
               <p className="mt-4 uppercase font-semibold text-black dark:text-white">
                 {(() => {
                   const endDate = new Date(currentSubDivision.end);
+                  endDate.setHours(23, 59, 59, 999); // Adjust for end of the day
                   const today = new Date();
+                  today.setHours(0, 0, 0, 0); // Adjust for start of the day
                   const remainingDays = Math.ceil(
                     (endDate.getTime() - today.getTime()) / (1000 * 3600 * 24)
                   );
