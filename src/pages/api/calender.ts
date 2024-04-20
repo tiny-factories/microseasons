@@ -6,7 +6,6 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const calendar = ical({
-    domain: "tinyseasons.vercel.app",
     name: "Tiny Seasons",
   });
 
