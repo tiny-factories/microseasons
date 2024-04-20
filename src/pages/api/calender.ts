@@ -1,31 +1,27 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import microseasons from "../../../public/microseasons.json";
+import ical from "ical-generator";
 
-const generateICS = (microseasons: any) => {
-  const icsEvents = microseasons
-    .map((season: any) => {
-      return `BEGIN:VEVENT
-SUMMARY:${season.name}
-DTSTART;VALUE=DATE:${season.start.replaceAll("-", "")}
-DTEND;VALUE=DATE:${season.end.replaceAll("-", "")}
-DESCRIPTION:${season.description}
-END:VEVENT`;
-    })
-    .join("\n");
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const calendar = ical({
+    domain: "tinyseasons.vercel.app",
+    name: "Tiny Seasons",
+  });
 
-  return `BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Your Company//Microseasons Calendar//EN
-${icsEvents}
-END:VCALENDAR`;
-};
+  // Fetching data directly from the local JSON file for simplicity
+  const microseasons = await import("../../../public/microseasons.json");
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const icsData = generateICS(microseasons);
+  microseasons.default.forEach((season) => {
+    calendar.createEvent({
+      start: new Date(season.start),
+      end: new Date(season.end),
+      summary: season.name,
+      description: season.description,
+    });
+  });
+
   res.setHeader("Content-Type", "text/calendar");
-  res.setHeader(
-    "Content-Disposition",
-    'attachment; filename="tiny-seasons.ics"'
-  );
-  res.send(icsData);
+  res.send(calendar.toString());
 }
